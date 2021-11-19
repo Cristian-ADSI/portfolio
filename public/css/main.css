@@ -10,6 +10,24 @@ body {
   font-family: "Montserrat", sans-serif;
   transition: all 0.3s ease;
 }
+.title-blue{
+  color: #00ffff;
+}
+.title-purple{
+  color: #514a9d;
+}
+.section-title{
+  text-align: center;
+  color: #ffffff;
+  font-size: 50px;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+.title-dark{
+  color: #0c1024;
+}
+
+
 .nav-link {
   color: #00ffff;
 }
@@ -25,10 +43,11 @@ body {
   width: 130px;
   max-width: 130px;
 }
-
+#home {
+  height: 100vh;
+}
 .home-title {
   width: 50%;
-  position: absolute;
   bottom: 50%;
   transform: translateY(50%);
 }
@@ -38,16 +57,9 @@ body {
   font-weight: 600;
 }
 .home-title h2 {
-  display: inline;
+  color: #FFFFFF;
   font-size: 50px;
   font-weight: 600;
-}
-.i-am,
-.lastname {
-  color: #ffffff;
-}
-.name {
-  color: aqua;
 }
 .home-text {
   margin-top: 30px;
@@ -58,7 +70,6 @@ body {
   padding-bottom: 30px;
   border-bottom: #a759ff solid 2px;
 }
-
 .home-title a {
   background: none;
   text-align: center;
@@ -73,8 +84,33 @@ body {
   margin-top: 10px;
   transition: all 0.3s ease;
 }
-
 .home-title a:hover {
   background: #00ffff;
   color: #0c1024;
+}
+
+.presentation-card {
+  /* fallback for old browsers */
+  background: #24c6dc;
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-linear-gradient(to right, #514a9d, #24c6dc);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: linear-gradient(to right, #514a9d, #24c6dc);
+  border-radius: 15px;
+  padding: 25px 35px;
+  margin-bottom: 20px;
+  box-shadow: #050711 -10px -5px 20px -3px;
+}
+.about-subtitle{
+  text-align: center;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+.about-text{
+  font-size: 24px;
+  color: #FFFFFF;
+  font-weight: 300;
+  text-align: center;
 }
