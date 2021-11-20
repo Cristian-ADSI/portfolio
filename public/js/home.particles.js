@@ -28,7 +28,7 @@ class Particle {
   draw() {
     ctx.beginPath();
     ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2, false);
-    // ircles 
+    // Circles 
     ctx.fillStyle = "#24214b";
     ctx.fill();
   }
@@ -69,7 +69,7 @@ class Particle {
 function init() {
   particleArray = [];
   let numberParticles = (canvas.height * canvas.width) / 9000;
-  for (let i = 0; i < numberParticles; i++) {
+  for (let i = 0; i < numberParticles*1.7; i++) {
     let size = Math.random() * 5 + 1;
     let x = Math.random() * (innerWidth - size * 2 - size * 2) + size * 2;
     let y = Math.random() * (innerHeight - size * 2 - size * 2) + size * 2;
