@@ -15,7 +15,8 @@ body {
 }
 .title-purple {
   color: #514a9d;
-  color: rgb(67, 23, 92);
+  color: #43175c;
+  color: #a759ff;
 }
 .section-title {
   text-align: center;
@@ -46,7 +47,7 @@ body {
 }
 #home {
   min-height: 100vh;
-  border-bottom: solid 1px #c000c3;
+  border-bottom: solid 1px #a759ff;
 }
 #canvas-home {
   position: absolute;
@@ -71,7 +72,6 @@ body {
   background: linear-gradient(to top, #0c102400, rgba(251, 0, 255, 0.63));
   mix-blend-mode: multiply;
 }
-
 .dergree{
   position: absolute;
   top: 0;
@@ -83,11 +83,9 @@ body {
   background: -webkit-linear-gradient(to top, #0c1024fb, rgba(255, 255, 255, 0));
   background: linear-gradient(to top, #0c1024fb, rgba(255, 255, 255, 0));
 }
-
 .home-title {
-  width: 50%;
-  bottom: 50%;
-  transform: translateY(30%);
+  position: relative;
+  transform: translateY(50%);
 }
 .home-title h1 {
   color: #ffffff;
@@ -106,9 +104,17 @@ body {
   font-size: 20px;
   font-weight: 300;
   padding-bottom: 30px;
-  border-bottom: #a759ff solid 2px;
+  border-bottom: #a759ff solid 1px;
 }
-.home-title a {
+.home-buton{
+  position: relative;
+  transform: translateY(50%);
+}
+.btn-messagge {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translateX(-50%);
   background: none;
   text-align: center;
   text-decoration: none;
@@ -119,10 +125,9 @@ body {
   padding: 8px 25px;
   border-radius: 50px;
   display: inline-block;
-  margin-top: 10px;
   transition: all 0.3s ease;
 }
-.home-title a:hover {
+.btn-messagge:hover {
   background: #00ffff;
   color: #0c1024;
 }
@@ -141,28 +146,65 @@ body {
   border-radius: 15px;
   padding: 25px 35px;
   margin: 50px 0px;
-  box-shadow: #050711 -10px -5px 20px -3px;
+  /* box-shadow: #050711 -10px -5px 20px -3px; */
 }
-.about-subtitle {
+.about-subtitle { 
+  width: 50%;
+  display: inline-block;
   color: #ffffff;
   font-weight: 700;
   font-size: 40px;
+  padding-bottom: 15px;
+  border-bottom: #00ffff 1px solid;
   margin-bottom: 20px;
 }
 .about-text {
-  font-size: 24px;
+  font-size: 20px;
   color: #ffffff;
   font-weight: 300;
   text-align: center;
 }
+.hobbies-row{
+  margin: 20px 0;
+  background: #151a33;
+  z-index: -1;
+  border-radius: 15px;
+  /* border: #a759ff solid 0.1px; */
+  box-shadow: #070a16 5px -5px 3px -4px;
+  }
 .hobbies{
+  margin: 0 auto;
+  position: relative;
   height: 250px;
   width: 250px;
-  border-radius: 15px;
-  text-align: center;
+  
+  
 }
 
-.icon{
-  color: #c000c3;
-  font-size: 100px;
+.hobbies img{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  width: 60%;
+}
+.hobbies .leyend{
+  position: absolute;
+  left: 50%;
+  top: 10%;
+  transform: translateX(-50%);
+  text-align: center;
+  padding: 5px;
+  width: 100%;
+  border-radius: 12px;
+  background-color: #ffffff;
+  color: #0b0923;
+  font-size: 18px;
+  transition: all .2s ease;
+  opacity: 0;
+}
+.hobbies:hover .leyend{
+  opacity: 1;
+  top: -5%;
+  transition: all .3s ease;
 }
