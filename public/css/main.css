@@ -14,7 +14,7 @@ body {
   color: #00ffff;
 }
 .title-purple {
-  color: rgb(81, 74, 157);
+  color: #514a9d;
   color: rgb(67, 23, 92);
 }
 .section-title {
@@ -127,6 +127,10 @@ body {
   color: #0c1024;
 }
 
+
+#about{
+  margin-top: 50px;
+}
 .presentation-card {
   /* fallback for old browsers */
   background: #c000c3;
@@ -136,11 +140,10 @@ body {
   background: linear-gradient(to right, #00c5c8, #c000c3);
   border-radius: 15px;
   padding: 25px 35px;
-  margin-bottom: 20px;
+  margin: 50px 0px;
   box-shadow: #050711 -10px -5px 20px -3px;
 }
 .about-subtitle {
-  text-align: center;
   color: #ffffff;
   font-weight: 700;
   font-size: 40px;
@@ -152,7 +155,14 @@ body {
   font-weight: 300;
   text-align: center;
 }
+.hobbies{
+  height: 250px;
+  width: 250px;
+  border-radius: 15px;
+  text-align: center;
+}
 
-#about{
-  margin-top: 50px;
+.icon{
+  color: #c000c3;
+  font-size: 100px;
 }
