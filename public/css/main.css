@@ -68,6 +68,23 @@ body {
   width: 130px;
   max-width: 130px;
 }
+.SVG{
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -100;
+  width: 100%;
+  height: 100vh;
+  
+}
+.svg img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -100;
+  opacity: 0;
+}
+
 
 
 /* Switch  button  */
@@ -140,6 +157,7 @@ body {
   width: 100%;
   height: 100%;
   z-index: -10;
+  transition: all 1s ease;
 }
 .mix-blend {
   position: absolute;
@@ -201,7 +219,7 @@ body {
 }
 .btn-messagge {
   position: absolute;
-  top: 80%;
+  bottom: 0;
   left: 50%;
   transform: translateX(-50%);
   background: none;
@@ -253,10 +271,10 @@ body {
   background: #ffffff;
   overflow: hidden;
   position: relative;
-  transform: translateY(-110%);
+  transform: translateY(-150%);
   pointer-events: none;
   visibility: hidden;
-  transition: all 0.2s ease;
+  transition: all 0.3s ease;
 }
 .show-modal {
   pointer-events: inherit;

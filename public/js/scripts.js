@@ -4,16 +4,18 @@ let contenModal = document.querySelector(".modal-container");
 let modal = document.querySelector(".modal");
 let btn_colseModal = document.querySelector(".close-modal-btn");
 
-//Dark $ Light Mode
+let modeState = 0;
+//DOM objects
 let navbar = document.querySelector('.navbar');
 let navlink = document.querySelector('.nav-link');
+
+let homeLine = document.querySelector('.home-line');
+
 let rootElement = document.querySelector(":root");
 let mode = document.querySelector("#switch-mode");
 let mixBlent = document.querySelector('.mix-blend');
-let svg = document.querySelector('svg');
+let svg = document.querySelector('.svg-img');
 
-
-let modeState = 0;
 
 
 function changeMode() {
@@ -26,30 +28,32 @@ function changeMode() {
 }
 
 function darkMode() {
-  navbar.style.background = '#0b0623';
-  canvas.style.display ='unset';
-  mixBlent.style.display = 'unset';
-  svg.style.opacity = 0;
-  
+  // :root 
   rootElement.style.setProperty("--main-bg-dark", "#0c1024");
   rootElement.style.setProperty("--bottom-home-D", "#0c1024fb");
-  // rootElement.style.setProperty("--title-color", "#ffffff");
-  rootElement.style.setProperty("--main-color", "#00ffff");
+  // navbar 
+  navbar.style.background = '#0b0623';
+  rootElement.style.setProperty("--nav-links", "#00ffff")
+
+  canvas.style.display ='unset';
+  mixBlent.style.display = 'unset';
+
+  svg.style.opacity = 0;
+  
+  
   
 }
 function lightMode() {
-  navbar.style.background = 'none';
-  canvas.style.display ='none';
-  mixBlent.style.display = 'none';
-  svg.style.opacity = 1;
-
-  ;
   rootElement.style.setProperty("--main-bg-dark", "#ffffff");
   rootElement.style.setProperty("--bottom-home-D", "none");
-  // rootElement.style.setProperty("--title-color", "#0c1024");
-  rootElement.style.setProperty("--main-color", "#a759ff");
+  // navbar 
+  navbar.style.background = 'none';
   rootElement.style.setProperty("--nav-links", "#ffffff")
-  homeSyles();
+
+  canvas.style.display ='none';
+  mixBlent.style.display = 'none';
+
+  svg.style.opacity = 1;
 }
 mode.addEventListener("click", function (e) {
   if (modeState == 0) {
