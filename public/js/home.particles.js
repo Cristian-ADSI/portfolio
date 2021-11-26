@@ -13,6 +13,16 @@ let mouse = {
 window.addEventListener("mousemove", function (event) {
   mouse.x = event.x;
   mouse.y = event.y;
+  
+  valueA = event.x;
+  valueB = event.x;
+  setTimeout(function () {
+    
+    if (valueA == event.x || valueB == event.y) {
+      mouse.x = undefined;
+      mouse.y = undefined;
+    }
+  },100);
 });
 
 class Particle {
@@ -28,7 +38,7 @@ class Particle {
   draw() {
     ctx.beginPath();
     ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2, false);
-    // Circles 
+    // Circles
     ctx.fillStyle = "#24214b";
     ctx.fill();
   }
@@ -69,7 +79,7 @@ class Particle {
 function init() {
   particleArray = [];
   let numberParticles = (canvas.height * canvas.width) / 9000;
-  for (let i = 0; i < numberParticles*1.7; i++) {
+  for (let i = 0; i < numberParticles * 1.7; i++) {
     let size = Math.random() * 5 + 1;
     let x = Math.random() * (innerWidth - size * 2 - size * 2) + size * 2;
     let y = Math.random() * (innerHeight - size * 2 - size * 2) + size * 2;
@@ -92,17 +102,18 @@ function animate() {
 }
 
 function connect() {
-  
   for (let a = 0; a < particleArray.length; a++) {
     for (let b = a; b < particleArray.length; b++) {
       let distance =
-        (particleArray[a].x - particleArray[b].x) * (particleArray[a].x - particleArray[b].x) +
-        (particleArray[a].y - particleArray[b].y) * (particleArray[a].y - particleArray[b].y);
+        (particleArray[a].x - particleArray[b].x) *
+          (particleArray[a].x - particleArray[b].x) +
+        (particleArray[a].y - particleArray[b].y) *
+          (particleArray[a].y - particleArray[b].y);
 
       if (distance < (canvas.width / 7) * (canvas.height / 7)) {
-        let opacity =  .5 - (distance/20000);
+        let opacity = 0.5 - distance / 20000;
         // ctx.strokeStyle = 'rgba(81, 74, 157,.08)';
-        ctx.strokeStyle = 'rgba(81, 74, 157,'+opacity+')';
+        ctx.strokeStyle = "rgba(81, 74, 157," + opacity + ")";
         ctx.lineWidth = 1;
         ctx.beginPath();
         ctx.moveTo(particleArray[a].x, particleArray[a].y);
