@@ -37,9 +37,8 @@ let modeState = 0;
 let rootElement = document.querySelector(":root");
 let navbar = document.querySelector(".navbar");
 let navlink = document.querySelector(".nav-link");
-let mixBlent = document.querySelector(".mix-blend");
 let btnMessagge = document.querySelector('.btn-messagge');
-let svg = document.querySelector(".svg-img");
+let svg = document.querySelector(".svg");
 
 mode.addEventListener("click", function (e) {
   if (modeState == 0) {
@@ -61,29 +60,28 @@ function changeMode() {
 }
 
 function lightMode() {
+  canvas.style.opacity = 0;
   rootElement.style.setProperty("--main-bg-dark", "#ffffff");
   rootElement.style.setProperty("--bottom-home-D", "none");
   
   //home
-  canvas.style.display = "none";
-  mixBlent.style.display = "none";
+  
   svg.style.opacity = 1;
-  navbar.classList.add('dark');
-  btnMessagge.classList.add('dark');
+  navbar.classList.add('light');
+  btnMessagge.classList.add('light');
 }
 function darkMode() {
   // :root
-  rootElement.style.setProperty("--main-bg-dark", "#0c1024");
-  rootElement.style.setProperty("--bottom-home-D", "#0c1024fb");
+  rootElement.style.setProperty("--main-bg-dark", "#1a1b54");
+  rootElement.style.setProperty("--bottom-home-D", "#1a1b54b6");
   // navbar
   
   //home
-  canvas.style.display = "unset";
-  mixBlent.style.display = "unset";
-  
+  canvas.style.opacity = 1;
+
   svg.style.opacity = 0;
-  navbar.classList.remove('dark');
-  btnMessagge.classList.remove('dark');
+  navbar.classList.remove('light');
+  btnMessagge.classList.remove('light');
 
 }
 

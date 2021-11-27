@@ -22,7 +22,7 @@ window.addEventListener("mousemove", function (event) {
       mouse.x = undefined;
       mouse.y = undefined;
     }
-  },100);
+  },200);
 });
 
 class Particle {
@@ -86,7 +86,7 @@ function init() {
     let directionX = Math.random() * 5 - 2.5;
     let directionY = Math.random() * 5 - 2.5;
 
-    let color = "#24214b";
+    let color = "#00ffff";
     particleArray.push(new Particle(x, y, directionX, directionY, size, color));
   }
 }
@@ -113,7 +113,7 @@ function connect() {
       if (distance < (canvas.width / 7) * (canvas.height / 7)) {
         let opacity = 0.5 - distance / 20000;
         // ctx.strokeStyle = 'rgba(81, 74, 157,.08)';
-        ctx.strokeStyle = "rgba(81, 74, 157," + opacity + ")";
+        ctx.strokeStyle = "rgba(51, 178, 255," + opacity + ")";
         ctx.lineWidth = 1;
         ctx.beginPath();
         ctx.moveTo(particleArray[a].x, particleArray[a].y);
