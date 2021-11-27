@@ -35,10 +35,13 @@ function openModal() {
 let mode = document.querySelector("#switch-mode");
 let modeState = 0;
 let rootElement = document.querySelector(":root");
+let sectionTitle = document.querySelector(':root');
 let navbar = document.querySelector(".navbar");
-let navlink = document.querySelector(".nav-link");
 let btnMessagge = document.querySelector('.btn-messagge');
+let titleBlue = document.querySelectorAll('.title-blue'  );
+console.log(titleBlue);
 let svg = document.querySelector(".svg");
+
 
 mode.addEventListener("click", function (e) {
   if (modeState == 0) {
@@ -63,25 +66,27 @@ function lightMode() {
   canvas.style.opacity = 0;
   rootElement.style.setProperty("--main-bg-dark", "#ffffff");
   rootElement.style.setProperty("--bottom-home-D", "none");
-  
-  //home
-  
   svg.style.opacity = 1;
   navbar.classList.add('light');
   btnMessagge.classList.add('light');
+  sectionTitle.style.setProperty("--title-color", "#0b0437");
+
+  titleBlue.forEach(element => {
+    element.style.color = 'var(--second-color)'
+  });
 }
 function darkMode() {
   // :root
   rootElement.style.setProperty("--main-bg-dark", "#1a1b54");
   rootElement.style.setProperty("--bottom-home-D", "#1a1b54b6");
-  // navbar
-  
-  //home
   canvas.style.opacity = 1;
-
   svg.style.opacity = 0;
   navbar.classList.remove('light');
   btnMessagge.classList.remove('light');
+  sectionTitle.style.setProperty("--title-color", "#ffffff");
 
+  titleBlue.forEach(element => {
+    element.style.color = 'var(--main-color)'
+  });
 }
 

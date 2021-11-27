@@ -8,10 +8,10 @@
 }
 :root {
   --main-color:     #00ffff;
-  --second-color:   #a759ff;
+  --second-color:   #a357f9;
   --third-color:    #458cf0;
   --hoover-btn: var(--main-color);
-  --main-bg-dark:   #1a1b54;
+  --main-bg-dark:   #151644;
   --second-bg-dark: #0b0437;
   --third-bg-dark:    #242568;
   --forth-bg-dark:  #0f0f57;
@@ -20,26 +20,25 @@
   --organge-color:  #f1c40f;
   --top-blend-D:    #fb00ffa1 ;
   --bottomb-lend-D: #0b0f2200 ;
-  --bottom-home-D:  #1a1b54b6;
+  --bottom-home-D:  #151644;
   --title-color:    #ffffff;
   --nav-links:      #00ffff;
 }
 body {
   background-color: var(--main-bg-dark);
   font-family: "Montserrat", sans-serif;
+  transition: all .3s ease;
 }
 .title-blue {
   color: var(--main-color);
 }
-.title-purple {
-  color: var(--second-color);
-}
+
 .title-light {
   color: var(--dark-bg-color);
 }
 .section-title {
   text-align: center;
-  color: var(--white-color); 
+  color: var(--title-color); 
   font-size: 50px;
   font-weight: 600;
   margin-bottom: 30px;
@@ -212,12 +211,12 @@ body {
   transform: translateY(50%);
 }
 .home-title h1 {
-  color: var(--title-color);
+  color: var(--white-color);
   font-size: 65px;
   font-weight: 300;
 }
 .home-title h2 {
-  color: var(--title-color);
+  color: var(--white-color);
   font-size:70px;
   font-weight: 600;
 }
@@ -228,13 +227,12 @@ body {
   font-size: 20px;
   font-weight: 300;
   padding-bottom: 30px;
-  border-bottom: #a759ff solid 1px;
+  border-bottom: var(--second-color) solid 1px;
 }
 .home-button {
   position: relative;
   transform: translateY(50%);
 }
-
 
 .btn-messagge {
   position: absolute;
