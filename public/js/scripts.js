@@ -35,12 +35,12 @@ function openModal() {
 let mode = document.querySelector("#switch-mode");
 let modeState = 0;
 let rootElement = document.querySelector(":root");
-let sectionTitle = document.querySelector(':root');
+let title = document.querySelector(':root');
 let navbar = document.querySelector(".navbar");
-let btnMessagge = document.querySelector('.btn-messagge');
+let btnMessagge = document.querySelector('#btn-messagge');
 let titleBlue = document.querySelectorAll('.title-blue'  );
-console.log(titleBlue);
 let svg = document.querySelector(".svg");
+let presentCard = document.querySelector('.presentation-card');
 
 
 mode.addEventListener("click", function (e) {
@@ -69,7 +69,8 @@ function lightMode() {
   svg.style.opacity = 1;
   navbar.classList.add('light');
   btnMessagge.classList.add('light');
-  sectionTitle.style.setProperty("--title-color", "#0b0437");
+  title.style.setProperty("--title-color", "#0b0437");
+  presentCard.classList.add('light');
 
   titleBlue.forEach(element => {
     element.style.color = 'var(--second-color)'
@@ -83,7 +84,8 @@ function darkMode() {
   svg.style.opacity = 0;
   navbar.classList.remove('light');
   btnMessagge.classList.remove('light');
-  sectionTitle.style.setProperty("--title-color", "#ffffff");
+  title.style.setProperty("--title-color", "#ffffff");
+  presentCard.classList.remove('light');
 
   titleBlue.forEach(element => {
     element.style.color = 'var(--main-color)'

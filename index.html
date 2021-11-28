@@ -7,11 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cristian Otero</title>
     <!-- Bootstrap Grid -->
-    <link rel="stylesheet" href="public/css/bootstrap.grid.css" />
+    <link rel="stylesheet" href="public/css/bootstrap-grid.css" />
     <!-- Main CSS  -->
     <link rel="stylesheet" href="public/css/main.css" />
+
     <!-- Font Awesome  -->
-    <script src="https://kit.fontawesome.com/525b443ceb.js" crossorigin="anonymous"></script>
+    <link href="https://file.myfontastic.com/J3PNojgD4gs8KkXHcUv4Jj/icons.css" rel="stylesheet">
 
 </head>
 
@@ -67,27 +68,40 @@
     </div>
     <!-- Home  -->
     <section id="home">
+
         <div class="container">
+
             <canvas id="canvas-home"></canvas>
             <div class="dergree"></div>
-            <div class="row">
-                <div class=" col-md-8 home-title">
 
-                    <h1>Hello World!</h1>
-                    <h2 class="home-subtitle">I´m <span style="color:#00ffff">Cristian</span> Otero.</h2>
-                    <h2 class="lastname"> </h2>
+            <div class="row  row-home">
+                <!-- text Section  -->
+                <div class=" col-md-8">
 
-                    <p class="home-text">
-                        Take a look to my site. Im probably what you are looking for. Enjoy your stay and leave a
-                        message.
-                    </p>
+                    <div class="home-title">
+                        <h1>Hello World!</h1>
+                        <h2 class="home-subtitle">I´m <span style="color:#00ffff">Cristian</span> Otero.</h2>
+                        <p class="home-text">
+                            Take a look to my site. Im probably what you are looking for. Enjoy your stay and leave a
+                            message.
+                        </p>
+                    </div>
+
                 </div>
 
-                <div class="col-md-4 home-button">
-                    <a id="btn-messagge" class="btn-messagge" href="#">Let´s Talk</a>
+                <!-- btn contact  -->
+                <div class="col-md-4 col-btn-messagge">
+
+                    <div class="btn-messagge">
+                        <a id="btn-messagge"href="#">Let´s Talk</a>
+                    </div>   
+
                 </div>
+
             </div>
+
         </div>
+
     </section>
 
     <!-- contact Modal  -->
@@ -121,45 +135,63 @@
 
     <!-- About  -->
     <section class="container" id="about">
+
         <h2 class="section-title">About <span class="title-blue">Me</span>.</h2>
+
+        <!-- Presentation  -->
         <div class="row">
+
             <div class="col-md-6 presentation-card">
-                <h2 class="about-subtitle text-center">How am i?</h2>
+                <h2 class="section-subtitle">How am i?</h2>
                 <p class="about-text">I am a freelancer web application developer who enjoys and is passionate about
                     learning new things every day and developing solutions that help people with their activities or
                     endeavors. I love being a part of tomorrow's industry, I love being a developer</p>
             </div>
-            <div class="col-md-5 offset-2"></div>
+
+            <div class="col-md-5 offset-1"></div>
         </div>
 
-        <h2 class="about-subtitle align-center">Likes & <span class="title-blue">hobbies</span> . </h2>
+        <h2 class="section-subtitle">Likes & <span class="title-blue">hobbies</span>.</h2>
+        <!-- Hobbied  -->
+        <div class="row">
+            <div class="col-md-2">
+                <div class="hobbies">
+                    <span><i class="ico-music-1"></i></span>
+                </div>
+            </div>
 
-        <!-- <div class="row hobbies-row">
-            <div class="col-sm-6 col-md-2 hobbies ">
-                <div class="leyend">Music</div>
-                <img src="public/img/rock&roll.svg" alt="">
+            <div class="col-md-2">
+                <div class="hobbies">
+                    <span><i class="ico-boxing-1"></i></span>
+                </div>
             </div>
-            <div class="col-sm-6 col-md-2 hobbies">
-                <div class="leyend">Hit the sack</div>
-                <img src="public/img/boxing.svg" alt="">
+
+            <div class="col-md-2">
+                <div class="hobbies">
+                    <span><i class="ico-food-1"></i></span>
+                </div>
             </div>
-            <div class="col-sm-6 col-md-2 hobbies">
-                <div class="leyend">Japanese food</div>
-                <img src="public/img/food.svg" alt="">
+
+            <div class="col-md-2">
+                <div class="hobbies">
+                    <span><i class="ico-code-1"></i></span>
+                </div>
             </div>
-            <div class="col-sm-6 col-md-2 hobbies">
-                <div class="leyend">Write Code</div>
-                <img src="public/img/coding.svg" alt="">
+
+            <div class="col-md-2">
+                <div class="hobbies">
+                    <span><i class="ico-movies-1"></i></span>
+                </div>
             </div>
-            <div class="col-sm-6 col-md-2 hobbies">
-                <div class="leyend">Write Code</div>
-                <img src="public/img/coding.svg" alt="">
+
+            <div class="col-md-2">
+                <div class="hobbies">
+                    <span><i class="ico-gaming-1"></i></span>
+                </div>
             </div>
-            <div class="col-sm-6 col-md-2 hobbies">
-                <div class="leyend">Write Code</div>
-                <img src="public/img/coding.svg" alt="">
-            </div>
-        </div> -->
+
+        </div>
+
     </section>
 
     <!-- studies  -->
@@ -170,10 +202,16 @@
             <div class="col-md-4">
                 <div class="card">
                     <h3 class="card-title">Software Development <span class="title-blue">Techincian</span>.</h3>
-                    <p class="card-text">
-                        Technician in software development where topics such as Wordpress, HTML, CSS Bootstrap Flexbox,
-                        MySQL and Javascript were addressed
-                    </p><br>
+                    <h4 class="card-title">
+                        career topics 
+                    </h4 >
+                    <p class="card-text">Wordpress</p>
+                    <p class="card-text">HTML</p>
+                    <p class="card-text">CSS</p>
+                    <p class="card-text">Bootstrap</p>
+                    <p class="card-text">Flexbox & CSS-Grid</p>
+                    <p class="card-text">MySQL</p>
+                    <p class="card-text">Javascript</p>
                     <h4 class="study-state">Status: <span class="title-blue">Finished</span></h4>
                     <div class="img-card">
                         <img src="public/img/LogoPoliandino.svg" width="75%" alt="">
