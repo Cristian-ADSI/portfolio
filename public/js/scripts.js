@@ -35,13 +35,13 @@ function openModal() {
 let mode = document.querySelector("#switch-mode");
 let modeState = 0;
 let rootElement = document.querySelector(":root");
-let title = document.querySelector(':root');
+let title = document.querySelector(":root");
 let navbar = document.querySelector(".navbar");
-let btnMessagge = document.querySelector('#btn-messagge');
-let titleBlue = document.querySelectorAll('.title-blue'  );
+let btnMessagge = document.querySelector("#btn-messagge");
+let titleBlue = document.querySelectorAll(".title-blue");
 let svg = document.querySelector(".svg");
-let presentCard = document.querySelector('.presentation-card');
-
+let presentCard = document.querySelector(".presentation-card");
+let hobbies = document.querySelectorAll('.hobbies');
 
 mode.addEventListener("click", function (e) {
   if (modeState == 0) {
@@ -66,29 +66,35 @@ function lightMode() {
   canvas.style.opacity = 0;
   rootElement.style.setProperty("--main-bg-dark", "#ffffff");
   rootElement.style.setProperty("--bottom-home-D", "none");
-  svg.style.opacity = 1;
-  navbar.classList.add('light');
-  btnMessagge.classList.add('light');
   title.style.setProperty("--title-color", "#0b0437");
-  presentCard.classList.add('light');
-
-  titleBlue.forEach(element => {
-    element.style.color = 'var(--second-color)'
+  svg.style.opacity = 1;
+  titleBlue.forEach((element) => {
+    element.style.color = "var(--second-color)";
+  });
+  // Add light classes
+  navbar.classList.add("light");
+  btnMessagge.classList.add("light");
+  presentCard.classList.add("light");
+  hobbies.forEach((element) => {
+    element.classList.add ('light');
   });
 }
+
 function darkMode() {
   // :root
   rootElement.style.setProperty("--main-bg-dark", "#1a1b54");
   rootElement.style.setProperty("--bottom-home-D", "#1a1b54b6");
-  canvas.style.opacity = 1;
-  svg.style.opacity = 0;
-  navbar.classList.remove('light');
-  btnMessagge.classList.remove('light');
   title.style.setProperty("--title-color", "#ffffff");
-  presentCard.classList.remove('light');
-
-  titleBlue.forEach(element => {
-    element.style.color = 'var(--main-color)'
+  svg.style.opacity = 0;
+  canvas.style.opacity = 1;
+  titleBlue.forEach((element) => {
+    element.style.color = "var(--main-color)";
+  });
+  // Remove light classes
+  navbar.classList.remove("light");
+  btnMessagge.classList.remove("light");
+  presentCard.classList.remove("light");
+  hobbies.forEach((element) => {
+    element.classList.remove ('light');
   });
 }
-
