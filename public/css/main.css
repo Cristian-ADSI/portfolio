@@ -428,6 +428,8 @@ body {
 
 /* ------------About------------- */
 #about {
+  padding: 50px;
+  width: 100%;
   margin-top: 70px;
   margin-bottom: 70px;
 }
@@ -445,6 +447,7 @@ body {
   background: -webkit-linear-gradient(to right,#06afea,var(--second-color)); 
   background: linear-gradient(to right,#06afea,var(--second-color));
 }
+
 .section-subtitle {
   width: 80%;
   display: inline-block;
