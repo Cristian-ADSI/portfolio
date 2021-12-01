@@ -7,10 +7,19 @@
   /* transition: all 0.3s ease; */
 }
 :root {
-  --main-color: #00ffff;
-  --second-color: #a357f9;
-  --third-color: #458cf0;
-  --hoover-btn: var(--main-color);
+  --first-blue:     #00ffff;
+  --second-blue:    #05C7F2;
+  --third-blue:     #0597F2;
+  --forth-blue:     #3866F2;
+
+  --first-violet:   #a357f9;
+  --second-violet:  #6F04D9;
+  --third-violet:   #49006A;
+  --forth-violet:   #A100EA;
+
+  --first-dark:   #1B0273;
+  --third-color: #3866F2;
+  --hoover-btn: var( --first-blue);
   --main-bg-dark: #151644;
   --second-bg-dark: #0b0437;
   --third-bg-dark: #242568;
@@ -22,7 +31,7 @@
   --organge-color: #f1c40f;
   --bottom-home-D: #151644;
   --title-color: #ffffff;
-  --nav-links: rgb(0, 255, 255);
+  --nav-links: var(--first-blue);
 }
 body {
   background-color: var(--main-bg-dark);
@@ -30,7 +39,7 @@ body {
   transition: all 0.3s ease;
 }
 .title-blue {
-  color: var(--main-color);
+  color: var( --first-blue);
 }
 
 .title-light {
@@ -49,7 +58,7 @@ body {
   margin: 0 auto;
   height: 20px;
   width: 150px;
-  border-bottom: solid 1px var(--main-color);
+  border-bottom: solid 1px var(--first-blue);
   transition: all 0.4s ease;
 }
 
@@ -74,7 +83,7 @@ body {
 .nav-link {
   font-size: 14px;
   text-decoration: none;
-  color: var(--main-color);
+  color: var( --first-blue);
 }
 .nav-link:hover {
   /* color: #a759ff; */
@@ -86,7 +95,7 @@ body {
   color: var(--white-color);
 }
 .navbar.light .nav-link:hover {
-  color: var(--main-color);
+  color: var( --first-blue);
   transition: all 0.3s ease;
 }
 
@@ -270,8 +279,8 @@ body {
   transform: translateX(-50%) translateY(100%);
 }
 #btn-messagge {
-  color: var(--main-color);
-  border: solid 1px var(--main-color);
+  color: var( --first-blue);
+  border: solid 1px var( --first-blue);
   border-radius: 50px;
   font-size: 25px;
   font-weight: 300;
@@ -281,7 +290,7 @@ body {
   transition: all 0.3s ease;
 }
 #btn-messagge:hover {
-  background: var(--main-color);
+  background: var( --first-blue);
   color: #0c1024;
 }
 #btn-messagge.light {
@@ -501,8 +510,8 @@ body {
   transition: all 0.3s ease;
 }
 .hobbies:hover {
-  border: 1px solid var(--main-color);
-  color: var(--main-color);
+  border: 1px solid var( --first-blue);
+  color: var( --first-blue);
   transform: translateY(-8px);
   box-shadow: #00ffff66 0px 5px 10px -3px;
   transition: all 0.3s ease;
@@ -515,7 +524,7 @@ body {
   transition: all 0.3s ease;
 }
 .hobbies:hover i {
-  color: var(--main-color);
+  color: var( --first-blue);
 }
 .hobbies.light:hover i{
   color: var(--white-color);
@@ -538,18 +547,35 @@ body {
   height: 90%;
   box-shadow: rgba(6, 9, 24, 0.4) 0px 5px 10px -1px;
 }
+.card.light{
+  background: var(--third-color);
+}
+
 .card-title {
   color: var(--white-color);
   text-align: center;
   margin-bottom: 15px;
 }
+
+.card .card-title span{
+  color: var(--second-color);
+}
+.card.light .card-title span{
+  color: var(--second-bg-dark);
+}
+
 .card-subtitle{
-  color: var(--main-color);
+  color: var( --first-blue);
   text-align: left;
   font-size: 20px;
-  font-weight: 500;
-  padding: 15px 0;
+  font-weight: 700;
+  padding: 15px 20px;
 }
+.card.light .card-subtitle{
+
+  color: var(--second-bg-dark);
+}
+
 .card-list{
   padding-left: 30px;
   color: var(--white-color);

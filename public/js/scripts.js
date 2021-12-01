@@ -42,6 +42,7 @@ let titleBlue = document.querySelectorAll(".title-blue");
 let svg = document.querySelector(".svg");
 let presentCard = document.querySelector(".presentation-card");
 let hobbies = document.querySelectorAll('.hobbies');
+let studyCard= document.querySelectorAll('.card');
 
 mode.addEventListener("click", function (e) {
   if (modeState == 0) {
@@ -78,6 +79,9 @@ function lightMode() {
   hobbies.forEach((element) => {
     element.classList.add ('light');
   });
+  studyCard.forEach((element) => {
+    element.classList.add ('light');
+  });
 }
 
 function darkMode() {
@@ -95,6 +99,9 @@ function darkMode() {
   btnMessagge.classList.remove("light");
   presentCard.classList.remove("light");
   hobbies.forEach((element) => {
+    element.classList.remove ('light');
+  });
+  studyCard.forEach((element) => {
     element.classList.remove ('light');
   });
 }
