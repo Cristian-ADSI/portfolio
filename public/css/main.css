@@ -10,29 +10,29 @@
   --first-blue:     #00ffff;
   --second-blue:    #05C7F2;
   --third-blue:     #0597F2;
-  --forth-blue:     #3866F2;
+  --forth-color:    #3866F2;
 
-  --first-violet:   #a357f9;
-  --second-violet:  #6F04D9;
-  --third-violet:   #49006A;
-  --forth-violet:   #A100EA;
+  --first-bg-dark:  #6363c7;
+  --second-violet:  #a357f9;
+  --third-violet:   #6F04D9;
+  --forth-violet:   #49006A;
+  --fiveth-violet:  #A100EA;
 
-  --first-dark:   #1B0273;
-  --third-color: #3866F2;
-  --hoover-btn: var( --first-blue);
-  --main-bg-dark: #151644;
-  --second-bg-dark: #0b0437;
-  --third-bg-dark: #242568;
-  --forth-bg-dark: #0f0f57;
-  --five-bg-dark: #6363c7;
-  --white-color: #ffffff;
-  --grey-color:#797979;
-  --dark-color: #292929;
-  --organge-color: #f1c40f;
-  --bottom-home-D: #151644;
-  --title-color: #ffffff;
-  --nav-links: var(--first-blue);
+  --first-dark:     #242568;
+  --second-dark:    #151644;
+  --third-dark:     #1B0273;
+  --forth-dark:     #0f0f57;
+  --fiveth-dark:    #0b0437;
+
+  --white-color:    #ffffff;
+  --ligth-grey:     #797979;
+  --dark-grey:      #292929;
+  --yellow-color:   #f1c40f;
+  --title-color:    #ffffff;
+  --hoover-btn:     var( --first-blue);
+  --nav-links:      var(--first-blue);
 }
+
 body {
   background-color: var(--main-bg-dark);
   font-family: "Montserrat", sans-serif;
