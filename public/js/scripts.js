@@ -34,15 +34,15 @@ function openModal() {
 //----------------Dark&light 'Variables'----------------
 let mode = document.querySelector("#switch-mode");
 let modeState = 0;
-let rootElement = document.querySelector(":root");
-let title = document.querySelector(":root");
-let navbar = document.querySelector(".navbar");
+let body=         document.querySelector('body')
+let degree =      document.querySelector('.degree');
+let navbar =      document.querySelector(".navbar");
 let btnMessagge = document.querySelector("#btn-messagge");
-let titleBlue = document.querySelectorAll(".title-blue");
-let svg = document.querySelector(".svg");
+let titleBlue =   document.querySelectorAll(".title-blue");
+let svg =         document.querySelector(".svg");
 let presentCard = document.querySelector(".presentation-card");
-let hobbies = document.querySelectorAll('.hobbies');
-let studyCard= document.querySelectorAll('.card');
+let hobbies =     document.querySelectorAll('.hobbies');
+let studyCard=    document.querySelectorAll('.card');
 
 mode.addEventListener("click", function (e) {
   if (modeState == 0) {
@@ -64,15 +64,13 @@ function changeMode() {
 }
 
 function lightMode() {
+  body.style.background = 'var(--white-color)'
+  degree.style.opacity = 0;
   canvas.style.opacity = 0;
-  rootElement.style.setProperty("--main-bg-dark", "#ffffff");
-  rootElement.style.setProperty("--bottom-home-D", "none");
-  title.style.setProperty("--title-color", "#0b0437");
   svg.style.opacity = 1;
   titleBlue.forEach((element) => {
     element.style.color = "var(--second-color)";
   });
-  // Add light classes
   navbar.classList.add("light");
   btnMessagge.classList.add("light");
   presentCard.classList.add("light");
@@ -85,16 +83,12 @@ function lightMode() {
 }
 
 function darkMode() {
-  // :root
-  rootElement.style.setProperty("--main-bg-dark", "#1a1b54");
-  rootElement.style.setProperty("--bottom-home-D", "#1a1b54b6");
-  title.style.setProperty("--title-color", "#ffffff");
+  degree.style.opacity = 1;
   svg.style.opacity = 0;
   canvas.style.opacity = 1;
   titleBlue.forEach((element) => {
     element.style.color = "var(--main-color)";
   });
-  // Remove light classes
   navbar.classList.remove("light");
   btnMessagge.classList.remove("light");
   presentCard.classList.remove("light");

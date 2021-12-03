@@ -10,10 +10,11 @@
   --first-blue:     #00ffff;
   --second-blue:    #05C7F2;
   --third-blue:     #0597F2;
-  --forth-color:    #3866F2;
+  --forth-blue:     #3866F2;
+  --fiveth-blue:    #28377d;
 
-  --first-bg-dark:  #6363c7;
-  --second-violet:  #a357f9;
+  --first-violet:   #6363c7;
+  --second-violet:  #a759ff;
   --third-violet:   #6F04D9;
   --forth-violet:   #49006A;
   --fiveth-violet:  #A100EA;
@@ -27,24 +28,25 @@
   --white-color:    #ffffff;
   --ligth-grey:     #797979;
   --dark-grey:      #292929;
-  --yellow-color:   #f1c40f;
+  --yellow:         #f1c40f;
   --title-color:    #ffffff;
   --hoover-btn:     var( --first-blue);
   --nav-links:      var(--first-blue);
 }
 
 body {
-  background-color: var(--main-bg-dark);
+  background-color: var(--second-dark);
   font-family: "Montserrat", sans-serif;
   transition: all 0.3s ease;
 }
+
 .title-blue {
   color: var( --first-blue);
 }
-
-.title-light {
-  color: var(--dark-bg-color);
+.title-blue.light {
+  color: var(--first-dark);
 }
+
 .section-title {
   text-align: center;
   color: var(--title-color);
@@ -65,7 +67,7 @@ body {
 /* ------------Navar------------  */
 .navbar {
   padding: 20px 0;
-  background: var(--main-bg-dark);
+  background: var(--second-dark);
   z-index: 100;
   /* position: fixed; */
   box-shadow: rgba(6, 9, 24, 0.282) 0px 5px 10px -1px;
@@ -82,20 +84,24 @@ body {
 
 .nav-link {
   font-size: 14px;
+  font-weight: 400;
   text-decoration: none;
   color: var( --first-blue);
+  transition: all 0.3s ease;
+
 }
 .nav-link:hover {
-  /* color: #a759ff; */
   color: var(--white-color);
   transition: all 0.3s ease;
 }
 
 .navbar.light .nav-link {
   color: var(--white-color);
+  transition: all 0.3s ease;
+
 }
 .navbar.light .nav-link:hover {
-  color: var( --first-blue);
+  color: var( --forth-dark);
   transition: all 0.3s ease;
 }
 
@@ -128,41 +134,41 @@ body {
   top: 100px;
 }
 .switch-mode {
+  position: relative;
+  border: var(--first-dark) solid 1px;
   border-radius: 50px;
-  background: var(--second-color);
   width: 30px;
   height: 65px;
-  border: var(--main-bg-dark) solid 1px;
-  position: relative;
+  background: var(--second-violet);
   box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 8px 1px;
-  transition: all 0.4s ease;
+  transition: all 0.3s ease;
 }
 .switch-mode.active {
-  background: var(--organge-color);
+  border: var(--ligth-grey) solid 1;
+  background: var(--yellow);
   transition: all 0.4s ease;
 }
 
 .switch-mode::after {
+  position: absolute;
   content: "";
   display: block;
   height: 32px;
   width: 32px;
-  background: var(--white-color);
-  position: absolute;
   left: 50%;
-  transform: translateX(-50%);
   bottom: 0;
   top: unset;
+  transform: translateX(-50%);
   border-radius: 50px;
+  background: var(--white-color);
   box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 5px 1px;
-  transition: all 0.4s ease;
+  transition: all 0.3s ease; 
 }
-
 .switch-mode.active::after {
   transform: translateX(-50%);
   bottom: unset;
   top: 0;
-  transition: all 0.4s ease;
+  transition: all 0.3s ease;
 }
 .switch-mode span {
   display: flex;
@@ -190,57 +196,27 @@ body {
   height: 100%;
   z-index: -100;
   opacity: 1;
-  transition: all 1s ease;
+  transition: all 3s ease;
 }
 #canvas-home.active .light {
   opacity: 0;
 }
-.mix-blend {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -5;
-  /* fallback for old browsers */
-  background: var(--bottomb-lend-D);
-  /* Chrome 10-25, Safari 5.1-6 */
-  background: -webkit-linear-gradient(
-    to top,
-    var(--bottomb-lend-D),
-    var(--bottomb-lend-D)
-  );
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  background: linear-gradient(
-    to top,
-    var(--bottomb-lend-D),
-    var(--top-blend-D)
-  );
 
-  mix-blend-mode: multiply;
-  display: unset;
-}
-.dergree {
+.degree {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   z-index: -3;
+  opacity: 1;
   /* fallback for old browsers */
   background: #1a1b54;
   /* Chrome 10-25, Safari 5.1-6 */
-  background: -webkit-linear-gradient(
-    to top,
-    var(--bottom-home-D),
-    rgba(255, 255, 255, 0)
-  );
+  background: -webkit-linear-gradient(to top,var(--second-dark),rgba(255, 255, 255, 0));
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  background: linear-gradient(
-    to top,
-    var(--bottom-home-D),
-    rgba(255, 255, 255, 0)
-  );
+  background: linear-gradient(to top,var(--second-dark),rgba(255, 255, 255, 0));
+  transition: all .3s ease;
 }
 .row-home {
   height: 100vh;
@@ -294,15 +270,16 @@ body {
   color: #0c1024;
 }
 #btn-messagge.light {
-  background-color: var(--third-color);
-  color: #ffffff;
-  border: solid 1px var(--third-color);
+  background-color: var(--forth-blue);
+  color:            var(--white-color);
+  border: solid 1px var(--forth-blue);
   transition: all 0.3s ease;
 }
 #btn-messagge.light:hover {
-  background: #28377d;
-  color: var(--white-color);
-  order: solid 1px var(--third-color);
+  background:         var(--fiveth-blue);
+  color:              var(--white-color);
+  border: solid 1px    var(--fiveth-blue);
+  transition: all 0.3s ease;
 }
 /* ------------Modal Message------------- */
 .modal-container {
@@ -353,22 +330,22 @@ body {
 .modal-title {
   font-weight: 700;
   font-size: 25px;
-  color: #0b0923;
+  color: var(--second-dark);
   text-align: left;
 }
 .close-modal-btn {
   display: flex;
   justify-content: end;
   align-items: center;
-  color: #0b0923;
+  color: var(--second-dark);
   text-align: right;
   font-weight: 500;
   cursor: pointer;
   transition: all 0.3s ease;
 }
 .close-modal-btn:hover {
-  transition: all 0.2s ease;
-  color: #a759ff;
+  color: var(--forth-violet);
+  transition: all 0.3s ease;
 }
 .form-input {
   margin-bottom: 15px;
@@ -430,8 +407,8 @@ body {
   transition: all 0.2s ease;
 }
 .send-message-btn:hover {
-  background: #0b0923;
-  border: solid 1px #0b0923;
+  background: var(--forth-violet);
+  border: solid 1px var(--forth-violet);
   transition: all 0.2s ease;
 }
 
@@ -443,18 +420,18 @@ body {
   margin-bottom: 70px;
 }
 .presentation-card {
-  background: var(--second-bg-dark);
+  background: var(--fiveth-dark);
   text-align: center;
   border-radius: 15px;
   padding: 25px 35px;
   margin: 50px 0px 100px 0;
   box-shadow: rgba(6, 9, 24, 0.5) 3px 5px 10px -2px;
 }
+
 .presentation-card.light {
   border: none;
-  background: var(--second-color);
   background: -webkit-linear-gradient(to right,#06afea,var(--second-color)); 
-  background: linear-gradient(to right,#06afea,var(--second-color));
+  background: linear-gradient(to right,#06afea,var(--second-color)); 
 }
 
 .section-subtitle {
