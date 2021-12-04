@@ -2,7 +2,7 @@
   let mode = document.querySelector("#switch-mode");
   let modeState = 0;
   let body = document.querySelector("body");
-  let sectionTitle = document.querySelector('.section-title');
+  let sectionTitle = document.querySelectorAll(".section-title");
   let degree = document.querySelector(".degree");
   let navbar = document.querySelector(".navbar");
   let btnMessagge = document.querySelector("#btn-messagge");
@@ -36,12 +36,17 @@
     degree.style.opacity = 0;
     canvas.style.opacity = 0;
     svg.style.opacity = 1;
-    titleBlue.forEach((element) => {
-      element.style.color = "var(--second-color)";
-    });
     navbar.classList.add("light");
     btnMessagge.classList.add("light");
     presentCard.classList.add("light");
+
+
+    sectionTitle.forEach((element) => {
+      element.classList.add("light");
+    });
+    titleBlue.forEach((element) => {
+      element.style.color = "var(--second-violet)";
+    });
     hobbies.forEach((element) => {
       element.classList.add("light");
     });
@@ -55,12 +60,17 @@
     degree.style.opacity = 1;
     svg.style.opacity = 0;
     canvas.style.opacity = 1;
-    titleBlue.forEach((element) => {
-      element.style.color = "var(--main-color)";
-    });
+    svg.style.opacity = 1;
     navbar.classList.remove("light");
     btnMessagge.classList.remove("light");
     presentCard.classList.remove("light");
+
+    sectionTitle.forEach((element) => {
+      element.classList.remove("light");
+    });
+    titleBlue.forEach((element) => {
+      element.style.color = "var(--first-blue)";
+    });
     hobbies.forEach((element) => {
       element.classList.remove("light");
     });
@@ -68,6 +78,4 @@
       element.classList.remove("light");
     });
   }
-
-
 })();

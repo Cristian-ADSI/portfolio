@@ -54,6 +54,9 @@ body {
   font-weight: 600;
   margin-bottom: 30px;
 }
+.section-title.light{
+  color: var(--second-dark);
+}
 .section-title::after {
   content: "";
   display: block;
@@ -430,8 +433,8 @@ body {
 
 .presentation-card.light {
   border: none;
-  background: -webkit-linear-gradient(to right,#06afea,var(--second-color)); 
-  background: linear-gradient(to right,#06afea,var(--second-color)); 
+  background: -webkit-linear-gradient(to right,#06afea,var(--second-violet)); 
+  background: linear-gradient(to right,#06afea,var(--second-violet)); 
 }
 
 .section-subtitle {
