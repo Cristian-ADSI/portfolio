@@ -3,6 +3,7 @@
   let modeState = 0;
   let body = document.querySelector("body");
   let sectionTitle = document.querySelectorAll(".section-title");
+  let subTitle = document.querySelectorAll(".section-subtitle");
   let degree = document.querySelector(".degree");
   let navbar = document.querySelector(".navbar");
   let btnMessagge = document.querySelector("#btn-messagge");
@@ -32,16 +33,19 @@
   }
 
   function lightMode() {
-    body.style.background = "var(--white-color)";
-    degree.style.opacity = 0;
-    canvas.style.opacity = 0;
-    svg.style.opacity = 1;
+    body.classList.add("light");
+    degree.classList.add("light");
+    canvas.classList.add("light");
+    svg.classList.add("light");
     navbar.classList.add("light");
     btnMessagge.classList.add("light");
     presentCard.classList.add("light");
 
 
     sectionTitle.forEach((element) => {
+      element.classList.add("light");
+    });
+    subTitle.forEach((element) => {
       element.classList.add("light");
     });
     titleBlue.forEach((element) => {
@@ -56,16 +60,18 @@
   }
 
   function darkMode() {
-    body.style.background = "var(--second-dark)";
-    degree.style.opacity = 1;
-    svg.style.opacity = 0;
-    canvas.style.opacity = 1;
-    svg.style.opacity = 1;
+    body.classList.remove("light");
+    degree.classList.remove("light");
+    canvas.classList.remove("light");
+    svg.classList.remove("light");
     navbar.classList.remove("light");
     btnMessagge.classList.remove("light");
     presentCard.classList.remove("light");
 
     sectionTitle.forEach((element) => {
+      element.classList.remove("light");
+    });
+    subTitle.forEach((element) => {
       element.classList.remove("light");
     });
     titleBlue.forEach((element) => {
